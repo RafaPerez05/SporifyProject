@@ -13,6 +13,7 @@ class CreateMusicasTable extends Migration
             $table->string('nome');
             $table->string('caminho');
             $table->string('autor');
+            $table->string('img');
             $table->text('descricao')->nullable();
             // Adicione outros campos conforme necessário
             $table->timestamps();

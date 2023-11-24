@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Nov-2023 às 19:46
+-- Tempo de geração: 24-Nov-2023 às 21:44
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -54,11 +54,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_reset_tokens_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2023_11_24_170825_create_musicas_table', 2);
+(6, '2014_10_12_000000_create_users_table', 1),
+(7, '2014_10_12_100000_create_password_reset_tokens_table', 1),
+(8, '2019_08_19_000000_create_failed_jobs_table', 1),
+(9, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(10, '2023_11_24_170825_create_musicas_table', 1);
 
 -- --------------------------------------------------------
 
@@ -71,6 +71,7 @@ CREATE TABLE `musicas` (
   `nome` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `caminho` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `autor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `descricao` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -80,8 +81,8 @@ CREATE TABLE `musicas` (
 -- Extraindo dados da tabela `musicas`
 --
 
-INSERT INTO `musicas` (`id`, `nome`, `caminho`, `autor`, `descricao`, `created_at`, `updated_at`) VALUES
-(1, 'Novo Balanço', 'sei-la', 'Veigh', 'Uh novo balanço', NULL, NULL);
+INSERT INTO `musicas` (`id`, `nome`, `caminho`, `autor`, `img`, `descricao`, `created_at`, `updated_at`) VALUES
+(1, 'Californication', 'mudarAqui', 'Red Hot Chillie Peppers', '../../../public/img/taylor.jpg', 'Banda ganhadora de 6 grammys', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -136,7 +137,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'adm1', 'adm@gmail.com', NULL, '$2y$12$II0igQ34oG7avx9uEqHB1.NUggpPOuymc21W3Jps9huFoNodXERP2', '580nVOfSbS1IWpLwmGqRX3czE35xVJI19aWS16RrllRk9WGcVARjTF3LCr2N', '2023-11-24 19:14:32', '2023-11-24 19:14:32');
+(1, 'adm1', 'adm@gmail.com', NULL, '$2y$12$/6lfP6PibiwX9cG.rHuSg.kceESIG.cABGC9fpyEHY4T1o9hUVFSm', NULL, '2023-11-24 22:37:52', '2023-11-24 22:37:52');
 
 --
 -- Índices para tabelas despejadas
@@ -196,7 +197,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de tabela `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `musicas`

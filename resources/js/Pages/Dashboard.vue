@@ -55,48 +55,7 @@ import MusicaList from '@/Components/MusicaList.vue'
         <div class="bg-gray-800 p-4 rounded-xl shadow-md w-74 mb-3">
             <h1 class="text-xl mt-4 text-white py-2">Playlists do Spotify</h1>
             <div class="flex space-x-3">
-                <div class="bg-gray-900 w-52 rounded-xl overflow-hidden shadow-lg mr-2">
-                    <!-- ... (conteúdo existente) ... -->
-                    <img class="w-48 h-44 px-2 py-2 rounded-xl ml-2" src="../components/img/thebest.jpg"
-                        alt="Imagem do matuê">
-                    <div class="px-2 py-4">
-                        <p class="text-xl font-semibold mb-2 text-white">This is Michael Jackson</p>
-                        <p class="text-gray-400 text-base">A melhor artista Pop de todas as eras
-                        </p>
-                    </div>
-
-                </div>
-                <div class="bg-gray-900 w-52 rounded-xl overflow-hidden shadow-lg mr-2">
-                    <!-- ... (conteúdo existente) ... -->
-                    <img class="w-48 h-44 px-2 py-2 rounded-xl ml-2" src="../components/img/tue.jpg" alt="Imagem do matuê">
-                    <div class="px-2 py-4">
-                        <p class="text-xl font-semibold mb-2 text-white">This is Matuê</p>
-                        <p class="text-gray-400 text-base">Um dos melhores se não o melhor trapper da cena brasileira hoje
-                        </p>
-                    </div>
-
-                </div>
-                <div class="bg-gray-900 w-52 rounded-xl overflow-hidden shadow-lg mr-2">
-                    <!-- ... (conteúdo existente) ... -->
-                    <img class="w-48 h-44 px-2 py-2 rounded-xl ml-2" src="../components/img/taylor.jpg"
-                        alt="Imagem do matuê">
-                    <div class="px-2 py-4">
-                        <p class="text-xl font-semibold mb-2 text-white">This is Taylor Swift</p>
-                        <p class="text-gray-400 text-base">A melhor artista do ano de 2023
-                        </p>
-                    </div>
-
-                </div>
-                <div class="bg-gray-900 w-52 rounded-xl overflow-hidden shadow-lg mr-2">
-                    <!-- ... (conteúdo existente) ... -->
-                    <img class="w-48 h-44 px-2 py-2 rounded-xl ml-2" src="../components/img/rhcp.jpg" alt="Imagem do matuê">
-                    <div class="px-2 py-4">
-                        <p class="text-xl font-semibold mb-2 text-white">This is Red Hot Chilli Peppers</p>
-                        <p class="text-gray-400 text-base">A banda de Rock com 6 Grammy
-                        </p>
-                    </div>
-
-                </div>
+               <MusicaList />
             </div>
             <p class="text-white h-40 px-2"></p>
         </div>
