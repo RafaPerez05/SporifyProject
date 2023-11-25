@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Nov-2023 às 21:44
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.6
+-- Tempo de geração: 25/11/2023 às 20:17
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,33 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `failed_jobs`
+-- Estrutura para tabela `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) NOT NULL,
+  `connection` text NOT NULL,
+  `queue` text NOT NULL,
+  `payload` longtext NOT NULL,
+  `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `migrations`
+-- Estrutura para tabela `migrations`
 --
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Extraindo dados da tabela `migrations`
+-- Despejando dados para a tabela `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -63,52 +63,55 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `musicas`
+-- Estrutura para tabela `musicas`
 --
 
 CREATE TABLE `musicas` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nome` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `caminho` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `autor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `descricao` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nome` varchar(255) NOT NULL,
+  `caminho` varchar(255) NOT NULL,
+  `autor` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `descricao` text DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Extraindo dados da tabela `musicas`
+-- Despejando dados para a tabela `musicas`
 --
 
 INSERT INTO `musicas` (`id`, `nome`, `caminho`, `autor`, `img`, `descricao`, `created_at`, `updated_at`) VALUES
-(1, 'Californication', 'mudarAqui', 'Red Hot Chillie Peppers', '../../../public/img/taylor.jpg', 'Banda ganhadora de 6 grammys', NULL, NULL);
+(1, 'Californication', 'mudarAqui', 'Red Hot Chillie Peppers', 'img/rhcp.jpg', 'Banda ganhadora de 6 grammys', NULL, NULL),
+(2, 'Shake It Off', 'Mudar depois', 'Taylor Alison Swift', 'img/taylor.jpg', 'LOIRA', NULL, NULL),
+(3, 'Billie Jean', 'Mudar dps', 'Micheal Jackson', 'img/thebest.jpg', 'Melhor de todos os tempos', NULL, NULL),
+(4, 'Conexões de Máfia', 'music/Tue.mp3', 'Matuê', 'img/tue.jpg', 'E trap que voce quer', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `password_reset_tokens`
+-- Estrutura para tabela `password_reset_tokens`
 --
 
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `personal_access_tokens`
+-- Estrutura para tabela `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tokenable_type` varchar(255) NOT NULL,
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `token` varchar(64) NOT NULL,
+  `abilities` text DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `expires_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -118,58 +121,58 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Estrutura para tabela `users`
 --
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Extraindo dados da tabela `users`
+-- Despejando dados para a tabela `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'adm1', 'adm@gmail.com', NULL, '$2y$12$/6lfP6PibiwX9cG.rHuSg.kceESIG.cABGC9fpyEHY4T1o9hUVFSm', NULL, '2023-11-24 22:37:52', '2023-11-24 22:37:52');
+(1, 'adm1', 'adm@gmail.com', NULL, '$2y$12$/6lfP6PibiwX9cG.rHuSg.kceESIG.cABGC9fpyEHY4T1o9hUVFSm', 'fngMiUd8lobmbC6atjnTEw1zVhtIYv8hDGaTfV8Hp9jEibwxgyvoQTqNXdZ3', '2023-11-24 22:37:52', '2023-11-24 22:37:52');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `failed_jobs`
+-- Índices de tabela `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Índices para tabela `migrations`
+-- Índices de tabela `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `musicas`
+-- Índices de tabela `musicas`
 --
 ALTER TABLE `musicas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `password_reset_tokens`
+-- Índices de tabela `password_reset_tokens`
 --
 ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`email`);
 
 --
--- Índices para tabela `personal_access_tokens`
+-- Índices de tabela `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -177,14 +180,14 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Índices para tabela `users`
+-- Índices de tabela `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -203,7 +206,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de tabela `musicas`
 --
 ALTER TABLE `musicas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `personal_access_tokens`
