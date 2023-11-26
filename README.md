@@ -76,7 +76,9 @@ Abra seu navegador e acesse http://localhost:8000 para explorar o seu Clone do S
 
 ## Membros 👨‍👨‍👦‍👦
 - <a href="https://github.com/RafaPerez05"><img src="https://avatars.githubusercontent.com/u/126112322?s=400&u=59abdf7171067a1f748a38ce03e5b1294e6e14ea&v=4" style="width:50px;height:50px;border-radius:50px">   Rafael Perez Silva </a>
-- <a href="https://github.com/Yan0606"><img src="https://avatars.githubusercontent.com/u/116196986?v=4" style="width:50px;height:50px;border-radius:50px"> Yan Andrade
+- <a href="https://github.com/Yan0606"><img src="https://avatars.githubusercontent.com/u/116196986?v=4" style="width:50px;height:50px;border-radius:50px"> Yan Andrade </a>
+- <a href="https://github.com/Yan0606"> Arthur Marques </a>
+
 
 <br>
 
