@@ -14,21 +14,20 @@ import MusicaList from '@/Components/MusicaList.vue'
         <div class="container mt-10 ml-10 p-4">
             <div class="flex">
                 <!-- Conteúdo à esquerda -->
-                <div class="bg-gray-900 p-4 rounded-lg shadow-md w-80 mr-4 h-40">
-
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md w-80 mr-4 h-40">
+                    
                     <a href="#"
                         class="flex items-center space-x-4 text-gray-300 visited:text-slate-50 w-min divide-none mt-2">
                         <img src="../components/img/casa.png" alt="icone de casa" class="w-5 h-5">
                         <p class="ml-2">Início</p>
                     </a>
-
+                    
                     <a href="#"
                         class="flex items-center space-x-4 text-gray-300 visited:text-slate-50 w-min divide-none mt-2">
                         <img src="../components/img/lupa.png" alt="icone de lupa" class="w-5 h-5">
                         <p class="ml-2">Buscar</p>
                     </a>
 
-                    <div class="bg-gray-900 p-4 rounded-lg w-80 mt-16 ">
                         <a href="#"
                             class="flex items-center space-x-4 text-gray-300 visited:text-slate-50 w-max divide-none mt-2 mb-4">
                             <img src="../components/img/biblioteca.png" alt="icone de lupa" class="w-6 h-6">
@@ -37,7 +36,7 @@ import MusicaList from '@/Components/MusicaList.vue'
                                 class="w-6 h-6 ml-32">
                         </a>
 
-                        <div class="bg-gray-800 p-4 rounded-lg shadow-md w-74 mb-3">
+                        <div class="bg-gray-800 p-4 rounded-lg shadow-md w-74 mb-4">
                             <p class="text-white h-9">Crie sua primeira playlist</p>
                             <p class="text-white text-sm h-10">É fácil, vamos te ajudar</p>
                             <button class="bg-white text-black rounded-full h-8 w-32">Criar playlist</button>
@@ -47,7 +46,6 @@ import MusicaList from '@/Components/MusicaList.vue'
                             <p class="text-white text-sm h-10">Avisaremos você sobre novos episódios</p>
                             <button class="bg-white text-black rounded-full h-8 w-36">Explore podcasts</button>
                         </div>
-                    </div>
                 </div>
 
 
