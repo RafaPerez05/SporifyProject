@@ -82,5 +82,7 @@ Abra seu navegador e acesse http://localhost:8000 para explorar o seu Clone do S
 
 <br>
 
-Observação: Este projeto é voltado para fins educacionais, e a segurança não foi a principal preocupação. 
+Observação: Este projeto é voltado para fins educacionais, e a segurança não foi a principal preocupação.
+Todos os direitos reservados a - <a href="https://open.spotify.com/intl-pt"> Spotify </a>.
+
 
