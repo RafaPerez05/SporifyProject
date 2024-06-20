@@ -22,6 +22,7 @@
 - CSS
 - JavaScript
 - PHP
+- Vue.js (Framework JS)
 - Laravel (Framework PHP)
 - Tailwinds (Framework CSS)
 - MySQL (Banco de Dados Relacional)
